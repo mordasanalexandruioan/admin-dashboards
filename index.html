@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js" integrity="sha512-VMsZqo0ar06BMtg0tPsdgRADvl0kDHpTbugCBBrL55KmucH6hP9zWdLIWY//OTfMnzz6xWQRxQqsUFefwHuHyg==" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <aside>
+            <button class="closeMenu"><i class="fas fa-times"></i></button>
+            <button class="showMenu"><i class="fas fa-bars"></i></button>
+        </aside>
+
+        <ul>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+            <li>
+                <a href="#">Restaurant's</a>
+            </li>
+            <li>
+                <a href="#">Manage User's</a>
+            </li>
+            <li>
+                <a href="#">Manage Order's</a>
+            </li>
+            <li>
+                <a href="#">Manage Coupon's</a>
+            </li>
+        </ul>
+    </header>
+
+
+
+    <main>
+        <h2>dashboards</h2>
+        <aside>
+            <div class="total-dashboard order">
+                <i class="fas fa-utensils"></i>
+                <span>220</span>
+                <span>total order</span>
+            </div>
+
+            <div class="total-dashboard completed">
+                <i class="fas fa-check-circle"></i>
+                <span>180</span>
+                <span>total completed order</span>
+            </div>
+
+            <div class="total-dashboard pending">
+                <i class="fas fa-list-alt"></i>
+                <span>20</span>
+                <span>total pending order</span>
+            </div>
+
+            <div class="total-dashboard cancelled">
+                <i class="fas fa-window-close"></i>
+                <span>20</span>
+                <span>total cancelled order</span>
+            </div>
+        </aside>
+
+        <section>
+
+            <canvas class="total-sales">
+
+            </canvas>
+
+
+
+            <canvas class="new-users">
+
+            </canvas>
+
+
+
+            <div class="order-breakdown">
+                <canvas class="chart total-order">
+
+            </canvas>
+
+                <canvas class="dine-ins">
+
+            </canvas>
+            </div>
+
+
+            <canvas class="coupon-usage">
+
+            </canvas>
+
+
+
+        </section>
+    </main>
+
+
+    <script src="javaScript/functions.js"></script>
+    <script src="javaScript/main.js"></script>
+</body>
+
+</html>

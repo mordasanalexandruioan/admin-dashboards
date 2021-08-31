@@ -1,0 +1,10 @@
+//utilities
+@import 'utilities/variables',
+'utilities/mixins';
+//base
+@import 'base/base',
+'base/reset';
+//layout
+@import 'layouts/header',
+'layouts/main';
+//components
