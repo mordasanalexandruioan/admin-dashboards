@@ -1,0 +1,7 @@
+section {
+    @include gridy($col: repeat(2, minmax(280px, 300px)), $rows: repeat(2, minmax(200px, 250px)), $gap: 40px);
+    & canvas {
+        max-width: 300px;
+        max-height: 230px;
+    }
+}

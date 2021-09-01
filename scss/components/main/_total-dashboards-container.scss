@@ -1,0 +1,41 @@
+.total-dashboards-container {
+    margin-bottom: 4em;
+    @include flexy($dir: row, $just: space-between, $wrap: wrap);
+    & .total-dashboard {
+        position: relative;
+        width: 180px;
+        height: 95px;
+        .fas {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.2rem;
+        }
+        span:nth-child(2) {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 1.7rem;
+            font-weight: lighter;
+        }
+        span:nth-child(3) {
+            position: absolute;
+            bottom: 10px;
+            right: 5px;
+            font-size: .7rem;
+            text-transform: uppercase;
+        }
+    }
+    & .order {
+        background-color: rgb(88, 181, 251);
+    }
+    & .completed {
+        background-color: rgb(107, 202, 86);
+    }
+    & .pending {
+        background-color: rgb(123, 102, 243);
+    }
+    & .cancelled {
+        background-color: rgb(239, 102, 116);
+    }
+}

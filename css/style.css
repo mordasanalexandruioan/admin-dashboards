@@ -8,40 +8,22 @@ body {
   font-family: "Maven Pro", sans-serif;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   overflow: hidden;
 }
 
 header {
   height: 100vh;
   background-color: #00142c;
+  min-width: 270px;
 }
-header aside {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+header.desappear {
+  transform: translateX(-218px);
+  transition: transform 0.5s;
 }
-header aside button {
-  margin: 0.4em;
-  font-size: 1.6rem;
-  border: none;
-  background-color: transparent;
-  color: #58b5fb;
-}
-header ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 5em;
-}
-header ul li {
-  margin-top: 0.5em;
-  padding-left: 0.4em;
-}
-header ul li a {
-  text-decoration: none;
-  color: #58b5fb;
-  font-size: 1.2rem;
+header.appear {
+  transform: translateX(0px);
+  transition: transform 0.5s;
 }
 
 main {
@@ -56,58 +38,90 @@ main h2 {
   text-transform: uppercase;
   font-weight: 400;
 }
-main aside {
-  margin-bottom: 4em;
+
+.buttons-menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
-main aside .total-dashboard {
+.buttons-menu button {
+  margin: 0.4em;
+  font-size: 1.6rem;
+  border: none;
+  background-color: transparent;
+  color: #58b5fb;
+}
+
+.options-menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 5em;
+}
+.options-menu li {
+  margin-top: 0.5em;
+  padding-left: 0.4em;
+}
+.options-menu li a {
+  text-decoration: none;
+  color: #58b5fb;
+  font-size: 1.2rem;
+}
+
+.total-dashboards-container {
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.total-dashboards-container .total-dashboard {
   position: relative;
-  width: 150px;
-  height: 85px;
+  width: 180px;
+  height: 95px;
 }
-main aside .total-dashboard .fas {
+.total-dashboards-container .total-dashboard .fas {
   position: absolute;
   top: 10px;
   left: 10px;
   font-size: 1.2rem;
 }
-main aside .total-dashboard span:nth-child(2) {
+.total-dashboards-container .total-dashboard span:nth-child(2) {
   position: absolute;
   right: 10px;
   top: 5px;
   font-size: 1.7rem;
   font-weight: lighter;
 }
-main aside .total-dashboard span:nth-child(3) {
+.total-dashboards-container .total-dashboard span:nth-child(3) {
   position: absolute;
   bottom: 10px;
   right: 5px;
   font-size: 0.7rem;
   text-transform: uppercase;
 }
-main aside .order {
+.total-dashboards-container .order {
   background-color: #58b5fb;
 }
-main aside .completed {
+.total-dashboards-container .completed {
   background-color: #6bca56;
 }
-main aside .pending {
+.total-dashboards-container .pending {
   background-color: #7b66f3;
 }
-main aside .cancelled {
+.total-dashboards-container .cancelled {
   background-color: #ef6674;
 }
-main canvas {
-  max-width: 300px;
-  max-height: 230px;
-}
-main section {
+
+section {
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 300px));
   grid-template-rows: repeat(2, minmax(200px, 250px));
   grid-gap: 40px;
+}
+section canvas {
+  max-width: 300px;
+  max-height: 230px;
 }
 
 /*# sourceMappingURL=style.css.map */

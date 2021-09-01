@@ -1,8 +1,14 @@
 let eventMenu = e => {
     let obj = e.target;
-
-    if (obj.className == "closeMenu") {
-
+    let menu = document.getElementsByTagName('header')[0];
+    let main = document.getElementsByTagName('main')[0];
+    if (obj.className == "closeMenu" || obj.className == "fas fa-times") {
+        menu.className = "desappear";
+        main.style.transform = "translateX(-220px)";
+        main.style.transition = "transform .5s";
+    } else if (obj.className == "showMenu" || obj.className == "fas fa-bars") {
+        menu.className = "appear";
+        main.style.transform = "translateX(0px)";
     }
 }
 

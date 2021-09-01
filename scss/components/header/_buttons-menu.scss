@@ -1,0 +1,10 @@
+.buttons-menu {
+    @include flexy($dir: row, $align: center, $just: space-between);
+    & button {
+        margin: .4em;
+        font-size: 1.6rem;
+        border: none;
+        background-color: transparent;
+        color: rgb(88, 181, 251);
+    }
+}

@@ -8,3 +8,7 @@
 @import 'layouts/header',
 'layouts/main';
 //components
+@import 'components/header/buttons-menu',
+'components/header/options-menu',
+'components/main/total-dashboards-container',
+'components/main/sections';
